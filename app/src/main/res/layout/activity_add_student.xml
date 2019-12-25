@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentActivity"
+    android:orientation="vertical"
+    android:background="#BED0EE">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Student Registration"
+        android:gravity="center"
+        android:id="@+id/infoText"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:fontFamily="sans-serif-light"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/studentName"
+        android:textSize="20sp"
+        android:hint="Name of Student"
+        android:background="@drawable/edit_text"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+</LinearLayout>
