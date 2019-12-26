@@ -29,7 +29,27 @@ public class AboutUsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
     {
+        View v = inflater.inflate(R.layout.fragment_about_us,container,false);
 
+        webView = v.findViewById(aboutUs);
+        progressBar = v.findViewById(R.id.progress);
+        webView.setWebViewClient(new WebViewClient(){
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                progressBar.setVisibility(view.VISIBLE);
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                progressBar.setVisibility(view.GONE);
+            }
+        });
+        webView.loadUrl("https://softwarica.edu.np/");
+
+
+        return v;
 
 
     }
